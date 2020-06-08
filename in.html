@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Tahoma, Arial;
+    }
+
+    .body {
+      background-color: rgb(249, 246, 250);
+    }
+
+    .header {
+      width: 100%;
+      height: 52px;
+      position: relative;
+      background-color: rgb(236, 233, 237);
+    }
+
+    .header .title {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .state {
+      width: 100%;
+      height: 200px;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      color: rgb(1, 108, 2);
+    }
+
+    .state::after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .inner {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .main {
+      width: 100%;
+      height: 200px;
+      position: relative;
+    }
+
+    .person {
+      width: 100%;
+      height: 180px;
+    }
+
+    .list {
+      height: 60px;
+      position: relative;
+    }
+
+    .list .icon {
+      width: 45%;
+      height: 100%;
+      position: relative;
+      float: left;
+      line-height: 60px;
+    }
+
+    .list .content {
+      height: 60px;
+      line-height: 60px;
+      padding-right: 10px;
+      vertical-align: middle;
+      text-align: right;
+    }
+
+    .list .icon .img {
+      height: 60px;
+      padding-left: 5px;
+      float: left;
+      line-height: 60px;
+
+    }
+
+    .list .icon .text {
+      position: absolute;
+      left: 40px;
+      font-size: 18px;
+      margin: auto;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .register {
+      font-size: 26px;
+      font-weight: bold;
+      color: rgb(249, 139, 0);
+    }
+
+    .time {
+      font-size: 24px;
+      font-weight: bold;
+      color: rgb(90, 165, 155);
+    }
+
+    .top {
+      width: 100%;
+      height: 1px;
+      background-color: #eee;
+    }
+
+    .wrap {
+      position: relative;
+      height: 60px;
+      padding-right: 10px;
+      font-size: 0;
+      overflow: hidden;
+    }
+
+    .wrap .cont {
+      height: 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* 宽度 大于容器的两倍即可 */
+      width: 200%;
+      -webkit-animation: 5s move infinite linear;
+    }
+
+    .wrap .txt {
+      font-size: 18px;
+      display: inline-block;
+      /* 宽度 等于容器的宽度 */
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      white-space:nowrap;
+    }
+
+    @-webkit-keyframes move {
+      0% {
+        left: 0;
+      }
+
+      100% {
+        left: -150%;
+      }
+    }
+    .plus {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .button {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    .title {
+      padding-left: 50px; 
+      font-size: 16px;
+      font-family: "Microsoft Yahei";
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="plus">
+      <img src="./static/plus.png">
+    </div>
+    <h5 class="title">平安成电智慧通行</h5>
+    <div class="button">
+      <img src="./static/points.png">
+    </div>
+  </div>
+  <div class="main">
+    <div class="state">
+      <div class="inner">
+        研究生用户，出校授权有效！
+      </div>
+    </div>
+    <div class="top"></div>
+    <div class="person">
+      <div class="list">
+        <div class="icon">
+          <div class="img">
+            <svg t="1591615005906" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="793" width="48" height="48">
+              <path
+                d="M511.8976 268.9024m-268.9024 0a268.9024 268.9024 0 1 0 537.8048 0 268.9024 268.9024 0 1 0-537.8048 0Z"
+                p-id="794"></path>
+              <path
+                d="M247.5008 534.3232h528.9984a225.28 225.28 0 0 1 225.28 225.28V1024H22.2208V759.6032a225.28 225.28 0 0 1 225.28-225.28z"
+                p-id="795"></path>
+            </svg>
+          </div>
+          <div class="text">
+            用户姓名
+          </div>
+        </div>
+        <div class="name content">姜励勤</div>
+      </div>
+      <div class="list">
+        <div class="icon">
+          <div class="img">
+            <svg t="1591614447525" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="3316" width="64" height="64">
+              <path
+                d="M593.92 630.328889s-34.133333-9.102222-43.235556-13.653333c-18.204444-11.377778-29.582222-34.133333-29.582222-56.888889 0-25.031111 20.48-45.511111 34.133334-61.44 34.133333-40.96 52.337778-95.573333 52.337777-157.013334 0-127.431111-91.022222-229.831111-202.524444-229.831111S202.524444 216.177778 202.524444 343.608889c0 61.44 20.48 116.053333 52.337778 157.013333 20.48 11.377778 34.133333 36.408889 34.133334 61.44 0 22.755556-11.377778 43.235556-29.582223 56.888889v2.275556c-2.275556 0-4.551111 2.275556-4.551111 2.275555-11.377778 6.826667-22.755556 11.377778-36.408889 11.377778-86.471111 29.582222-159.288889 75.093333-202.524444 131.982222h2.275555c-11.377778 15.928889-15.928889 34.133333-15.928888 52.337778 0 54.613333 45.511111 100.124444 102.4 100.124444H705.422222c59.164444 0 104.675556-43.235556 104.675556-100.124444 0-22.755556-9.102222-43.235556-20.48-61.44-43.235556-56.888889-111.502222-100.124444-195.697778-127.431111zM1001.244444 730.453333c-38.684444-47.786667-97.848889-88.746667-172.942222-111.502222 0 0-29.582222-6.826667-38.684444-11.377778-15.928889-11.377778-25.031111-29.582222-25.031111-50.062222 0-22.755556 18.204444-40.96 29.582222-52.337778 29.582222-36.408889 47.786667-84.195556 47.786667-138.808889 0-111.502222-79.644444-204.8-179.768889-204.8-15.928889 0-31.857778 2.275556-45.511111 6.826667 34.133333 50.062222 52.337778 109.226667 52.337777 175.217778 0 70.542222-25.031111 138.808889-68.266666 195.697778l-4.551111 4.551111v2.275555c-4.551111 4.551111-11.377778 11.377778-13.653334 18.204445 0 2.275556 0 2.275556 2.275556 2.275555 4.551111 2.275556 11.377778 4.551111 18.204444 4.551111h2.275556l9.102222 4.551112c93.297778 29.582222 172.942222 81.92 225.28 147.911111 22.755556 29.582222 36.408889 63.715556 36.408889 100.124444 0 20.48-4.551111 36.408889-11.377778 54.613333h65.991111c52.337778 0 93.297778-38.684444 93.297778-88.746666-2.275556-25.031111-9.102222-43.235556-22.755556-59.164445z m0 0"
+                fill="" p-id="3317"></path>
+            </svg>
+          </div>
+          <div class="text">
+            登记类型
+          </div>
+        </div>
+        <div class="register content">研究生（硕士）</div>
+      </div>
+      <div class="list">
+        <div class="icon">
+          <div class="img">
+            <svg t="1591617197657" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              p-id="6329" width="64" height="64">
+              <path
+                d="M512.072 879.734c-203.807 0-369.613-165.806-369.613-369.608s165.806-369.613 369.613-369.613S881.684 306.32 881.684 510.126s-165.81 369.608-369.612 369.608z m0-686.976c-174.997 0-317.364 142.366-317.364 317.363s142.367 317.358 317.364 317.358 317.363-142.367 317.363-317.358-142.372-317.363-317.363-317.363z m-375.476 97.157a26.127 26.127 0 0 1-21.8-40.479C155.694 187.233 211.4 134.784 275.9 97.772a26.132 26.132 0 0 1 35.661 9.656 26.117 26.117 0 0 1-9.656 35.66c-57.431 32.958-107.039 79.658-143.457 135.05a26.097 26.097 0 0 1-21.853 11.777z m750.95-0.01a26.112 26.112 0 0 1-21.856-11.776C829.27 222.74 779.663 176.04 722.232 143.084a26.127 26.127 0 1 1 26.01-45.312c64.497 37.012 120.207 89.456 161.106 151.659a26.117 26.117 0 0 1-21.801 40.474z"
+                fill="#2C2C2C" p-id="6330"></path>
+              <path
+                d="M233.441 915.697a26.122 26.122 0 0 1-18.473-44.6L286.9 799.17a26.122 26.122 0 0 1 36.946 0.005 26.122 26.122 0 0 1 0 36.946l-71.93 71.925a26.045 26.045 0 0 1-18.474 7.65z m557.261 0a26.035 26.035 0 0 1-18.473-7.655l-71.92-71.926a26.127 26.127 0 0 1 36.95-36.94L809.18 871.1a26.127 26.127 0 0 1-18.478 44.596zM644.45 676.869a26.05 26.05 0 0 1-18.473-7.65L493.6 536.848a26.127 26.127 0 0 1-7.655-18.473V300.877a26.127 26.127 0 0 1 52.255 0v206.669l124.728 124.718a26.138 26.138 0 0 1-18.478 44.605z"
+                fill="#2C2C2C" p-id="6331"></path>
+            </svg>
+          </div>
+          <div class="text">
+            登记时间
+          </div>
+        </div>
+        <div class="time content wrap">
+          <div class="cont">
+            <p class="txt"></p>
+            <!-- <p class="txt"></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top"></div>
+  </div>
+  <script>
+    function getDate() {
+      let myDate = new Date();
+      let year = myDate.getFullYear();
+      let month = myDate.getMonth() + 1;
+      let day = myDate.getDate();
+      month = (month.toString().length === 1) ? ('0' + month) : month;
+      day = (day.toString().length === 1) ? ('0' + day) : day;
+      let hour = myDate.getHours();
+      hour = (hour.toString().length === 1) ? ('0' + hour) : hour;
+      let minute = myDate.getMinutes();
+      minute = (minute.toString().length === 1) ? ('0' + minute) : minute;
+      let second = myDate.getSeconds();
+      second = (second.toString().length === 1) ? ('0' + second) : second;
+      let res = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ":" + second;
+      let temp = res;
+      res += "  ";
+      res += temp;
+      return res;
+    }
+    let res = getDate();
+    let txt1 = document.getElementsByClassName('txt')[0];
+    let txt2 = document.getElementsByClassName('txt')[1];
+
+    txt1.innerHTML = res;
+    txt2.innerHTML = res;
+  </script>
+</body>
+
+</html>
